@@ -16,10 +16,10 @@ Anyone can use Social Distance Alert System android application to maintain soci
 The app uses Bluetooth Low Energy signal strength to alert users when other app users are too close to helps you maintain social distance. When someone close to 2 metres it alerts user by notification and vibration and showing on screen.
 
 * **Bluetooth signal strength:**
-   **Strength:** 23  i.e. OK(Green)
-   **Strength:** 37  i.e. Warning(Yellow)
-   **Strength:** 52  i.e. Danger, Strong warn(Orange)
-   **Strength:** >52 i.e. Too close, Not socially distant(Red)
+* **Strength:** 23  i.e. OK(Green)
+* **Strength:** 37  i.e. Warning(Yellow)
+* **Strength:** 52  i.e. Danger, Strong warn(Orange)
+* **Strength:** >52 i.e. Too close, Not socially distant(Red)
 
 
 ## Features
