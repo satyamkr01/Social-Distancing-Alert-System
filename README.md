@@ -1,7 +1,7 @@
 # Social Distance Alert System
-**Social Distance Alert System** helps people to maintan social distancing at public transport, public places and companies workplace. It uses Bluetooth Low Energy(BLE) strength to alert people with notifications to prevent spread COVID-19.
-<img src="https://github.com/satyamkr01/Social_Distance_Alert_System/master/logo.png" width="90"> 
+<img src="https://github.com/satyamkr01/Social_Distance_Alert_System/blob/master/logo.png" width="120">
 
+**Social Distance Alert System** helps people to maintan social distancing at public transport, public places and companies workplace. It uses Bluetooth Low Energy(BLE) strength to alert people with notifications to prevent spread COVID-19.
 # Description
 
 ## Problem Statement
@@ -16,14 +16,14 @@ Anyone can use Social Distance Alert System android application to maintain soci
 The app uses Bluetooth Low Energy signal strength to alert users when other app users are too close to helps you maintain social distance. When someone close to 2 metres it alerts user by notification and vibration and showing on screen.
 
 * **Bluetooth signal strength:**
-Strength: 23 // OK(Green)
-Strength: 37 // Warning(Yellow)
-Strength: 52 // Strong warn(Orange)
-Strength: >52 // Not socially distant(Red)
+   **Strength:** 23  i.e. OK(Green)
+   **Strength:** 37  i.e. Warning(Yellow)
+   **Strength:** 52  i.e. Danger, Strong warn(Orange)
+   **Strength:** >52 i.e. Too close, Not socially distant(Red)
 
 
-### Features
-* **Monitor Users** - App alerts users when another app user is close using BLE proximity. 4 levels of granularity: "Ok"= green, "Warning"= yellow, "Danger" = Orange, "Too Close"= Red
+## Features
+* **Monitor Users** - App alerts users when another app user is close using BLE proximity. 4 levels of granularity: "Ok"= Green, "Warning"= Yellow, "Danger" = Orange, "Too Close"= Red
 * **Alerts** - User and shows signal strength when other app user devices are detected and also notify by notification sound, vibration and displaying alert on screen.
 * **Activity** - App stores a local history of the alerts from coming close to other app user devices. Displays Date and Time.
 * **Pause Monitoring** - User can turn off monitoring in app when not in use.
@@ -31,7 +31,5 @@ Strength: >52 // Not socially distant(Red)
 
 
 ## Resources section:
-
 * Link to CDC: https://www.cdc.gov/coronavirus/2019-ncov/index.html 
-
 * Link to WHO: https://www.who.int/emergencies/diseases/novel-coronavirus-2019 
