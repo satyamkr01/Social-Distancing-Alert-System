@@ -7,7 +7,7 @@
 ![Image of Social Distance Alert System](https://github.com/satyamkr01/Social_Distance_Alert_System/blob/master/app_flow.png)
 
 ## Watch Demo Video : ~3m
-[![](https://github.com/satyamkr01/Social_Distance_Alert_System/blob/master/video_icon.png)](https://github.com/satyamkr01/Social_Distance_Alert_System/blob/master/app_video.mp4 " Demo Video")
+[![](https://github.com/satyamkr01/Social_Distance_Alert_System/blob/master/video_icon.png)](https://drive.google.com/file/d/1tUvM_r-km7vRkiXL-afNufcdf1vFDbSp/view?usp=sharing)
 
 # Description
 
