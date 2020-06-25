@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ai.kun.socialdistancealarm.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="ai.kun.socialdistancealarm.ui.history.HistoryFragment"
+        android:label="@string/title_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/navigation_teams"
+        android:name="ai.kun.socialdistancealarm.ui.history.TeamsFragment"
+        android:label="@string/title_teams"
+        tools:layout="@layout/fragment_teams" />
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="ai.kun.socialdistancealarm.ui.launch.LaunchFragment"
+        android:label="LaunchFragment" >
+        <action
+            android:id="@+id/action_launchFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_launchFragment_to_onBoardFragment_1"
+            app:destination="@id/onBoardFragment_1"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="screen"
+                app:argType="integer"
+                android:defaultValue="1" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardFragment_1"
+        android:name="ai.kun.socialdistancealarm.ui.launch.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" >
+        <argument
+            android:name="screen"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_onBoardFragment_1_to_onBoardFragment_2"
+            app:destination="@id/onBoardFragment_2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardFragment_2"
+        android:name="ai.kun.socialdistancealarm.ui.launch.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" >
+        <argument
+            android:name="screen"
+            app:argType="integer"
+            android:defaultValue="2" />
+        <action
+            android:id="@+id/action_onBoardFragment_2_to_onBoardFragment_3"
+            app:destination="@id/onBoardFragment_3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardFragment_3"
+        android:name="ai.kun.socialdistancealarm.ui.launch.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" >
+        <argument
+            android:name="screen"
+            app:argType="integer"
+            android:defaultValue="3" />
+        <action
+            android:id="@+id/action_onBoardFragment_3_to_onBoardFragment_4"
+            app:destination="@id/onBoardFragment_4"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardFragment_4"
+        android:name="ai.kun.socialdistancealarm.ui.launch.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" >
+        <argument
+            android:name="screen"
+            app:argType="integer"
+            android:defaultValue="4" />
+        <action
+            android:id="@+id/action_onBoardFragment_4_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
