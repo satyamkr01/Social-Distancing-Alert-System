@@ -16,6 +16,7 @@ import android.bluetooth.le.AdvertiseSettings
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.ParcelUuid
 import android.os.PowerManager
 import android.util.Log
@@ -89,7 +90,13 @@ class BLEServer : BroadcastReceiver(), GattServerActionListener  {
         val intent = Intent(context, BLEServer::class.java)
         intent.putExtra(INTERVAL_KEY, interval)
         intent.putExtra(ISREACTNATIVE_KEY, BLETrace.isReactNative)
-        return PendingIntent.getBroadcast(context, SERVER_REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+        var flag = 0
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ) {
+            flag = PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        } else {
+            flag = PendingIntent.FLAG_UPDATE_CURRENT
+        }
+        return PendingIntent.getBroadcast(context, SERVER_REQUEST_CODE, intent, flag)
     }
 
 
