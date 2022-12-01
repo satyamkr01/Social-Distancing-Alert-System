@@ -160,9 +160,15 @@ object NotificationUtils {
         // is clicked.
         //TODO: replace hard coded class string with an extra passed to alarm manager
         val notificationIntent = Intent(context, Class.forName("ai.kun.socialdistancealarm.MainActivity"))
+        var flag = 0
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ) {
+            flag = PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        } else {
+            flag = PendingIntent.FLAG_UPDATE_CURRENT
+        }
         val notificationPendingIntent = PendingIntent.getActivity(
             context, NOTIFICATION_ID, notificationIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT
+            flag
         )
 
         // Build the notification with all of the parameters.

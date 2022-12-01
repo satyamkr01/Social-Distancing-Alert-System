@@ -15,6 +15,7 @@ import android.bluetooth.le.*
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.PowerManager
 import android.util.Log
 import androidx.core.app.AlarmManagerCompat
@@ -84,11 +85,18 @@ class BLEClient : BroadcastReceiver() {
         val intent = Intent(context, BLEClient::class.java)
         intent.putExtra(INTERVAL_KEY, interval)
         intent.putExtra(ISREACTNATIVE_KEY, BLETrace.isReactNative)
+        var flag = 0
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ) {
+            flag = PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        } else {
+            flag = PendingIntent.FLAG_UPDATE_CURRENT
+        }
+
         return PendingIntent.getBroadcast(
             context,
             CLIENT_REQUEST_CODE,
             intent,
-            PendingIntent.FLAG_UPDATE_CURRENT
+            flag
         )
     }
 
